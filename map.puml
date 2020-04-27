@@ -29,7 +29,8 @@ enum Difficulty {
 }
 
 Recipe "1" <--> "1" Notes
-Recipe "1" <--> "*" Ingredient
+Recipe "1" ---> "*" Ingredient
+Ingredient "*" ---> "1" Recipe
 Recipe "*" <--> "*" Category
 Recipe ---> Difficulty
 Ingredient "1" <--> "1" UnitOfMeasure
